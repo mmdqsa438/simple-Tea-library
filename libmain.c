@@ -7,7 +7,7 @@ int get_line(char str[] , int maxlen ){
     for(index=0;index<maxlen-1 && (character=getchar())!='\n';index++){
         str[index]=character;
     } str[index]='\0';
-    if(character=='\n' && index=0){
+    if(character=='\n' && index==0){
         return 0 ;
     } return 1 ;
 }
@@ -20,14 +20,14 @@ int commandchecker( char command[] , char sorce[] ){
     } return 1 ;
 }
 int main(void){
-    const char teainfo[]="TeaInfo" , findtea[]="FindTea", addtea[]="AddTea", exit[]="Exit" ;
+    char teainfo[]="TeaInfo" , findtea[]="FindTea", addtea[]="AddTea", exit[]="Exit" ;
     char bookname[MAXLEN] ,writername[MAXLEN],date[MAXLEN], command[MAXLEN] ;
     wellcome();
     while(TRUE){
         printf("Please Enter Your command : ");
         if(get_line(command,MAXLEN)){
             if(commandchecker(command,teainfo)){
-                printbydilay("OK, Please realax and enjoy !\n" , 60 , 1000 );
+                printbydilay( "OK Please realax and enjoy!\n " , 60 , 1000 );
 
                 //TeaInfo() >>> from tea library modulu [ call without parameters ; can print in program .
 
@@ -40,7 +40,7 @@ int main(void){
                 if(!get_line(writername,MAXLEN)){
                     printf("\n! sorry you must enter the auther name !\n");
                     continue;  
-                } printf("Please Specify The Publication Date : ")
+                } printf("Please Specify The Publication Date : ");
                 if(!get_line(date,MAXLEN)){
                     printf("\nOh! sorry you must enter Date !\n");
                     continue;
@@ -52,7 +52,7 @@ int main(void){
                 
                 //} else{
 
-                    printf("\nsorry , we have not found searched book right here ...\n")
+                    printf("\nsorry , we have not found searched book right here ...\n");
                 
                 //}
             } else if ( commandchecker(command,addtea)){
@@ -64,7 +64,7 @@ int main(void){
                 if(!get_line(writername,MAXLEN)){
                     printf("\n! sorry you must enter the auther name !\n");
                     continue;  
-                } printf("Please Specify The Publication Date : ")
+                } printf("Please Specify The Publication Date : ");
                 if(!get_line(date,MAXLEN)){
                     printf("\nOh! sorry you must enter Date !\n");
                     continue;

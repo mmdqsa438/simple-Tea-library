@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <windows.h> // for Sleep(timeByMiliSec); function to make runtime more slowdow
 void printbydilay(char str[] , int firsdilay , int secenddilay ){
