@@ -48,7 +48,7 @@ int main(void){
 
                 //if(FindTea( bookname , writername , date , MAXLEN )){ //>>> from tea library [ return 0 ,1 .
                     
-                    printf("\n\tCongradulation, The Book %s By %s wrote in %s find in our library.\n\tby your student card you can use it ...\n");
+                    printf("\n\tCongradulation, The Book %s By %s wrote in %s find in our library.\n\tby your student card you can use it ...\n",bookname,writername,date);
                 
                 //} else{
 
@@ -72,7 +72,7 @@ int main(void){
 
                 //if(AddTea( bookname , writername , date , MAXLEN)){ >>> from tea lib [ return 0 if lib overflowed .
 
-                    printf("\n\tCongradulation, The Book %s By %s wrote in %s has added to our library.\n");
+                    printf("\n\tCongradulation, The Book %s By %s wrote in %s has added to our library.\n",bookname,writername,date);
                 //}else{
                     printf("sorry there is no empty place for your book right now ...\n");
                 //}
